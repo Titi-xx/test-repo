@@ -1,0 +1,65 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - GamerHub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="forum.html">Forum</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <!-- Contact Section -->
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form class="contact-form" id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div id="contactErrorMessage" style="color: red; display: none;"></div>
+    </div>
+
+    
+
+    <!-- JavaScript for Contact Form -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const name = this.name.value.trim();
+            const email = this.email.value.trim();
+            const message = this.message.value.trim();
+            const errorMessage = document.getElementById('contactErrorMessage');
+
+            // Simple validation (additional validation can be added)
+            if (name === '' || email === '' || message === '') {
+                errorMessage.textContent = 'Please fill in all fields.';
+                errorMessage.style.display = 'block';
+                return;
+            }
+
+            // Simulate form submission
+            alert('Thank you for contacting us, ' + name + '! We will get back to you shortly.');
+            errorMessage.style.display = 'none';
+            document.getElementById('contactForm').reset(); // Clear form
+        });
+    </script>
+
+ <!-- Footer -->
+ <footer>
+    <p>&copy; 2024 GamerHub. All rights reserved.</p>
+</footer>
+
+
+</body>
+</html>
+

@@ -1,0 +1,53 @@
+<!-- forum.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum - GamerHub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="forum.html">Forum</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <!-- Forum Section -->
+    <div class="container">
+        <h2>Game Forums</h2>
+        <ul class="forum-list">
+            <li><strong>Action Games Discussion</strong></li>
+            <li><strong>RPG & Adventure Game Help</strong></li>
+            <li><strong>Cheat Codes Repository</strong></li>
+            <li><strong>Multiplayer & eSports</strong></li>
+            <li><strong>General Gaming Chat</strong></li>
+        </ul>
+
+        <!-- Post Submission Section -->
+        <div id="postSection">
+            <h3>Create a Post</h3>
+            <form id="postForm" action="/forum-post-handler" method="POST">
+                <textarea name="postContent" placeholder="Write your post..." required></textarea>
+                
+                <!-- Google reCAPTCHA widget -->
+                <div class="g-recaptcha" data-sitekey="6LeCqT8qAAAAAIDgw162_V_g4qAxuS3_Yie38kj8"></div>
+                
+                <button type="submit">Post</button>
+            </form>
+            <div id="errorMessage" style="display: none;"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 GamerHub. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
