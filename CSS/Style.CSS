@@ -127,21 +127,39 @@
     margin-top: 10px;
   }
   /* Background Image for Header Section */
+header {
+  background: url('../image/background-image.jpg') no-repeat center center/cover;
+  color: #fff;
+  background-size: cover;
+  background-position: center center;
+  text-align: center; /* Adjusted to center text */
+  padding: 100px 20px; /* Adjusted padding for a better fit */
+}
+
+header h1 {
+  font-size: 3em; /* Added unit */
+}
+
+header p {
+  font-size: 1.5em;
+}
+
+/* Example of adding responsiveness */
+@media (max-width: 768px) {
+  .container {
+      width: 100%;
+      padding: 10px;
+  }
+
   header {
-    background: url('../image/background-image.jpg') no-repeat center center/cover;
-    color: #fff;
-    background-size: cover;
-    text-align: auto;
-    padding: 400px 100px;
+      padding: 50px 10px; /* Adjusted padding for smaller screens */
   }
-  
-  header h1 {
-    font-size: 3;
+
+  .register-container {
+      width: 100%; /* Make the register container fit mobile screens */
   }
-  
-  header p {
-    font-size: 1.5em;
-  }
+}
+
   .register-container {
     background-color: white;
     padding: 20px;
